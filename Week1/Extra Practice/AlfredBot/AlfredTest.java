@@ -1,3 +1,4 @@
+
 public class AlfredTest {
     /*
     * This main method will always be the launch point for a Java application
@@ -31,5 +32,6 @@ public class AlfredTest {
         System.out.println(alexisTest);
         System.out.println(alfredTest);
         System.out.println(notRelevantTest);
+
     }
 }
