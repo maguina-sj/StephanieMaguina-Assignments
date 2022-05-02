@@ -21,5 +21,17 @@ public class TravelService {
 	public void createExpense(Travel travel) {
 		travelsRepo.save(travel);
 	}
+	//update
+	public void updateExpense(Travel travel) {
+		travelsRepo.save(travel);
+	}
+	// delete
+	public void deleteExpense(Long id) {
+		travelsRepo.deleteById(id);
+	}
+	// get expense details
+	public Travel expenseDetails(Long id) {
+		return travelsRepo.findById(id).orElse(null);
+	}
 	
 }

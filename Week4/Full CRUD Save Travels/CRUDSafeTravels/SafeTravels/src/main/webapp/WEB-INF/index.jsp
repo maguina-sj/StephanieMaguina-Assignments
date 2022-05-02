@@ -30,11 +30,11 @@
 	<tbody>
 	<c:forEach items = "${allTravels}" var = "travels">
     <tr>
-      <td><c:out value="${travels.expense}"></c:out></td>
+      <td><a href="/view/${travels.id}"><c:out value="${travels.expense}"></c:out></a></td>
       <td><c:out value="${travels.vendor}"></c:out></td>
       <td><c:out value="${travels.amount}"></c:out></td>
-      <td><a href="/edit/{travels.id}">Edit</a>
-      <form:form action="/delete/{travels.id}" method="delete">
+      <td><a href="/edit/${travels.id}">Edit</a>
+      <form:form action="/delete/${travels.id}" method="delete">
       <button>Delete</button>
       </form:form>
       </td>
@@ -61,6 +61,7 @@
     <form:input path="description" class="form-control"/>
     <form:errors class ="text-danger" path="description"/>
 
+	<button>Create Expense</button>
 </form:form>
 </body>
 </html>

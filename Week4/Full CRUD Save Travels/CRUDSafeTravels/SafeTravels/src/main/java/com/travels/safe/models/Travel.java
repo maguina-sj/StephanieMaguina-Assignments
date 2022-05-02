@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="travels")
@@ -13,10 +15,16 @@ public class Travel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	
+	@NotBlank
+	@Size(min =2, max=200)
 	private String expense;
+	@NotBlank
+	@Size(min =2, max=200)
 	private String vendor;
+	
 	private double amount;
+	@NotBlank
+	@Size(min =2, max=200)
 	private String description;
 	public Long getId() {
 		return id;
@@ -47,6 +55,9 @@ public class Travel {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public Travel() {
+
 	}
 	
 	
