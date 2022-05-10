@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="container">
-<h1>Welcome <c:out value="${loggedinUser.name}"/></h1>
+<h1>Welcome <c:out value="${loggedInUser.name}"/></h1>
 <a href="/book/new">+Add to my shelf!</a>
 <a href="/logout">Logout</a>
 <p>Books from everyone's shelves:</p>
@@ -30,6 +30,7 @@
 </thead>
 <c:forEach items="${books}" var="book">
 	<tr>
+	<td>${book.id}</td>
 		<td><a href="/book/details/${book.id}">${book.title}</a></td>
 		<td>${book.author}</td>
 		<td>${book.user.name}</td>

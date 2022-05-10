@@ -74,6 +74,7 @@ public class UserController {
 //		 check if user is in session
 		if(session.getAttribute("loggedInUser")!= null) {
 			model.addAttribute("books", bookService.allBooks());
+			model.addAttribute("loggedInUser", session.getAttribute("loggedInUser"));
 		return "dashboard.jsp";
 	}
 		else {

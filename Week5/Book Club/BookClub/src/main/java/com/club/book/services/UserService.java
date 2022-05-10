@@ -18,7 +18,7 @@ public class UserService {
 // validation - check for duplicate email and password mismatch
 	public void validate(User user, Errors errors) {
 		//password matching
-		if(user.getPassword().equals(user.getConfirm())) {
+		if(!user.getPassword().equals(user.getConfirm())) {
 			errors.rejectValue("password", "mismatch", "Password does not match");
 			//check for duplicate email
 		if(userRepo.findByEmail(user.getEmail())!=null) {
