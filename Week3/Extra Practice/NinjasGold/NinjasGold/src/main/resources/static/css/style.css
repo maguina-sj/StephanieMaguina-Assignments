@@ -1,0 +1,13 @@
+.container {
+	height: 350px;
+	width: 700px;
+	margin: auto;
+}
+.col-3 {
+	border: 2px solid black;
+	height: 130px;
+}
+.container2 {
+	border: 2px solid black;
+	height: 250px;
+}
